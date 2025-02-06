@@ -32,7 +32,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('/data');
+      const response = await axios.get('http://localhost:3001/api/data');
       setData(response.data);
       setLastUpdated(new Date().toISOString());
     } catch (err) {
@@ -42,6 +42,7 @@ function App() {
       setLoading(false);
     }
   };
+
   const processData = () => {
     const filteredData = selectedProperty === 'All Properties'
       ? data
@@ -90,7 +91,7 @@ function App() {
            justifyContent="center" minHeight="100vh" bgcolor="#f5f5f5">
         <CircularProgress size={60} />
         <Typography variant="h4" sx={{ mt: 4, mb: 2 }}>
-          Preparing Your Data
+          Preparing Your Report
         </Typography>
       </Box>
     );
