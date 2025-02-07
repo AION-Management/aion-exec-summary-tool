@@ -1,0 +1,4 @@
+DB_USER = user
+DB_PASSWORD = pass
+DB_SERVER = url
+DB_DATABASE = db
